@@ -153,7 +153,7 @@ export type ShlinkVisitsParams = {
 };
 
 export type ShlinkWithDomainVisitsParams = ShlinkVisitsParams & {
-  domain?: string | 'DEFAULT';
+  domain?: string | 'DEFAULT'; // oxlint-disable-line typescript/no-redundant-type-constituents
 };
 
 export type ShlinkOrphanVisitsParams = ShlinkWithDomainVisitsParams & {
@@ -199,7 +199,7 @@ export type ShlinkShortUrlsListParams = {
    * List short URLs only for this domain authority. Use DEFAULT keyword for the default domain.
    * Available since Shlink 4.3.0
    */
-  domain?: string | 'DEFAULT';
+  domain?: string | 'DEFAULT'; // oxlint-disable-line typescript/no-redundant-type-constituents
   tags?: string[];
   tagsMode?: ShlinkTagsFilteringMode;
   /** Available since Shlink 4.6.0 */
