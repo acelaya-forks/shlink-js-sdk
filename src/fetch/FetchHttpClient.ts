@@ -12,7 +12,7 @@ const withJsonContentType = (options?: RequestOptions): RequestInit | undefined 
   return options ? {
     ...options,
     headers: {
-      ...(options.headers ?? {}),
+      ...options.headers,
       ...applicationJsonHeader,
     },
   } : {

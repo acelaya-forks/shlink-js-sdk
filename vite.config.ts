@@ -2,7 +2,6 @@ import { resolve } from 'path';
 import dts from 'unplugin-dts/vite';
 import { defineConfig } from 'vitest/config';
 
-// eslint-disable-next-line no-restricted-exports
 export default defineConfig({
   plugins: [dts({ entryRoot: 'src', exclude: ['test', 'vite.config.ts'] })],
 
@@ -31,11 +30,7 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       reportsDirectory: './coverage',
-      include: [
-        'src/**/*.ts',
-        '!src/index.ts',
-        '!src/api-contract/*',
-      ],
+      include: ['src/**/*.ts', '!src/index.ts', '!src/api-contract/*'],
       reporter: ['text', 'text-summary', 'clover', 'html'],
 
       // Required code coverage. Lower than this will make the check fail

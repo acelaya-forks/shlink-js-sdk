@@ -7,7 +7,7 @@ function padArray<T>(arr: T[], length: number, fillValue: T) {
   }
 
   const padLength = length - arr.length;
-  const padArray = new Array(padLength).fill(fillValue);
+  const padArray = Array.from({ length: padLength }).fill(fillValue);
 
   return [...arr, ...padArray];
 }

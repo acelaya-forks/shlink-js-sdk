@@ -12,6 +12,7 @@ jobs:
     secrets: inherit
     with:
       install-playwright: false
+      cs-script: true
 
   integration-tests:
     runs-on: ubuntu-24.04

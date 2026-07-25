@@ -9,12 +9,11 @@ updates:
       timezone: 'Europe/Madrid'
     open-pull-requests-limit: 10
     groups:
-      eslint:
+      oxc:
         patterns:
-          - '@shlinkio/eslint-config-js-coding-standard'
-          - 'typescript-eslint'
-          - '*eslint-plugin*'
-          - eslint
+          - 'oxfmt'
+          - 'oxlint'
+          - 'oxlint-tsgolint'
       shlink:
         patterns:
           - '@shlinkio/*'
