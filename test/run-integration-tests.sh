@@ -15,7 +15,7 @@ sleep 2 # Let's give the server a couple of seconds to start
 export SHLINK_API_KEY=$(docker exec ${CONTAINER} shlink api-key:generate | grep "Generated API key" | sed 's/.*Generated\ API\ key\:\ \"\(.*\)\".*/\1/')
 
 if [ "${RUNTIME}" = "node" ]; then
-  npm run test -- --config vitest-integration.config.ts
+  node --run test -- --config vitest-integration.config.ts
 elif [ "${RUNTIME}" = "deno" ]; then
   deno run -A npm:vitest run --config vitest-integration.config.ts
 elif [ "${RUNTIME}" = "bun" ]; then
